@@ -7,7 +7,7 @@ fetch_nb_dependencies
 
 """
 
-from quantecon.util import fetch_nb_dependencies
+from quantecon_wasm.util import fetch_nb_dependencies
 import os
 
 FILES = ['test_file.md']

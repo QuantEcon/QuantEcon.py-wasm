@@ -53,7 +53,7 @@ def fetch_nb_dependencies(files, repo=REPO, raw=RAW, branch=BRANCH, folder=FOLDE
 
     Assuming the file is at the root level in the ``master`` branch then:
 
-    >>> from quantecon.util import fetch_nb_dependencies
+    >>> from quantecon_wasm.util import fetch_nb_dependencies
     >>> status = fetch_nb_dependencies(["test.csv"], repo="https://<github_address>")
 
     More than one file may be requested in the list provided
