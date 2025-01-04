@@ -1,0 +1,22 @@
+*.pyc
+*.ipynb_checkpoints*
+
+__pycache__/*
+build/
+/dist/
+quantecon.egg-info/
+*.DS_Store
+*.TODO
+*.noseids
+*.coverage
+*.h5
+*.lcov
+.pytest_cache/*
+
+# Numba cache files
+*.nbc
+*.nbi
+
+# Coverage
+
+coverage.xml
