@@ -1032,6 +1032,11 @@ def _qnwbeta1(n, a=1.0, b=1.0):
     nodes = np.zeros(n)
     weights = np.zeros(n)
 
+    # Cast to avoid scalar overflow warning
+    n = np.int64(n)
+    a = np.float64(a)
+    b = np.float64(b)
+    
     # Find "reasonable" starting values.  Why these numbers?
     for i in range(n):
         if i == 0:
@@ -1050,6 +1055,7 @@ def _qnwbeta1(n, a=1.0, b=1.0):
             r2 = 1+0.22*(n-8)/n
             r3 = 1+8*b/((6.28+b)*n*n)
             z = z-(nodes[0]-z)*r1*r2*r3
+            print('r1, r2, n, r3, z, nodes[0], a', type(n), type(r2))
         elif i == n - 2:
             r1 = (1+0.235*b)/(0.766+0.119*b)
             r2 = 1/(1+0.639*(n-4)/(1+0.71*(n-4)))
